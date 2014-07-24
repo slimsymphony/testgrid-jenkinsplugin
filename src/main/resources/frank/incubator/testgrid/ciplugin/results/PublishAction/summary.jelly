@@ -1,0 +1,34 @@
+<j:jelly xmlns:j="jelly:core" 
+	xmlns:st="jelly:stapler" 
+	xmlns:d="jelly:define"
+	xmlns:l="/lib/layout" 
+	xmlns:t="/lib/hudson" 
+	xmlns:f="/lib/form"
+	xmlns:i="jelly:fmt" 
+	xmlns:local="local">
+	<h2>This build ran <j:out value="${it.testsetName}" />,got <j:out value="${it.testcaseCnt}" /> testcases. Succeed <j:out value="${it.successCnt}" />  testcases. Failed <j:out value="${it.failureCnt}" />  testcases. Missed <j:out value="${it.missedCnt}" />  testcases. No Result <j:out value="${it.naCnt}" />  testcases. Total Time Cost <j:out value="${it.totalTimeCost}" /> </h2>
+	<h3>Success Cases</h3>
+	<ol>
+		<j:forEach var="successCase" items="${it.successCases}">
+			<li><j:out value="${successCase}"/></li>
+		</j:forEach>
+	</ol>
+	<h3>Failed Cases</h3>
+	<ol>
+		<j:forEach var="case" items="${it.failureCases}">
+			<li><j:out value="${case}"/></li>
+		</j:forEach>
+	</ol>
+	<h3>Missed Cases</h3>
+	<ol>
+		<j:forEach var="case" items="${it.missedCases}">
+			<li><j:out value="${case}"/></li>
+		</j:forEach>
+	</ol>
+	<h3>NoResult Cases</h3>
+	<ol>
+		<j:forEach var="caseNa" items="${it.naCases}">
+			<li><j:out value="${caseNa}"/></li>
+		</j:forEach>
+	</ol>
+</j:jelly>

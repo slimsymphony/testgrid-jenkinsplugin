@@ -1,0 +1,7 @@
+<!--
+  This view is used to render the installed plugins page.
+-->
+<div>
+  This plugin is a junit report parser which won't block parallel running( junit plugin will block).
+  And Provide result history compare action.
+</div>

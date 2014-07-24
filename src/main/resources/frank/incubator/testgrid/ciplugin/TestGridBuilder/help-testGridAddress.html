@@ -1,0 +1,18 @@
+<div>
+	<p>
+		<br /><b>MANDATORY</b>
+		<br />This option has support for parameters. Default value is ${TESTGRID_ADDRESS}.
+		<br />Format should be a json format object like:
+        <br />[
+        <br />{'id':'BROKER_TASK','uri':'nio://10.220.120.10:61616','mq':'ActiveMQ'},
+        <br />{'id':'BROKER_STATUS','uri':'tcp://10.220.120.10:61617','mq':'ActiveMQ'},
+        <br />{'id':'BROKER_FT','uri':'nio://10.220.120.10:61616','mq':'ActiveMQ'},
+        <br />{'id':'BROKER_NOTIFICATION','uri':'tcp://10.220.120.10:61617','mq':'ActiveMQ'}
+        <br />]
+        <br />
+		<br />Or a simple URL like:
+		<br />tcp://10.220.120.10:61616
+		<br />
+		<br /><b>NOTE:</b> TESTGRID needs to be running in that address in order to work!
+	</p>
+</div>

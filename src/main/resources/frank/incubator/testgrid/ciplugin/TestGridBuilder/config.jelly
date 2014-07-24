@@ -1,0 +1,96 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+	
+	<!-- Tool Arguments -->
+	<f:nested>
+		<f:section title="Tool Arguments" >
+			<f:advanced>
+				<!-- Test Tool -->
+				<f:entry title="${%Test Tool}" field="testTool">
+					<f:textbox default="${descriptor.getDefaultTestTool()}" />
+				</f:entry>
+				<!-- Flash Arguments -->
+				<f:entry title="${%Flash Arguments}" field="flashArguments">
+					<f:textbox default="${descriptor.getDefaultFlashArguments()}" />
+				</f:entry>
+			</f:advanced>
+		</f:section>
+	</f:nested>
+	
+	<!-- Testtool and Testcase Location -->
+	<f:nested>
+		<f:section title="Testtool and Testcase Location" >
+			<f:advanced>
+				
+				<!-- Release package URL -->
+                <f:entry title="${%Release package URL}" field="releasePackageUrl">
+                    <f:textbox default="${descriptor.getDefaultReleasePackageUrl()}" />
+                </f:entry>
+				
+                <!-- Test package URLs -->
+                <f:entry title="${%Test package URLs}" field="testPackageUrls">
+                    <f:textbox default="${descriptor.getDefaultTestPackageUrls()}" />
+                </f:entry>
+
+                <!-- Device requirements -->
+                <f:entry title="${%Device requirements}" field="deviceRequirements">
+                    <f:textbox default="${descriptor.getDeviceRequirements()}" />
+                </f:entry>
+
+                <!-- Original testset URL -->
+                <f:entry title="${%Original testset URL}" field="originalTestsetUrl">
+                    <f:textbox default="${descriptor.getOriginalTestsetUrl()}" />
+                </f:entry>
+
+			</f:advanced>
+		</f:section>
+	</f:nested>
+	
+	<!-- Allocation Options -->
+	<f:nested>
+		<f:section title="Allocation Options" >
+			<f:advanced>
+				<!-- TestGrid Address -->
+				<f:entry title="${%TestGrid Address}" field="testGridAddress">
+					<f:textbox default="${descriptor.getDefaultTestGridAddress()}" />
+				</f:entry>
+			</f:advanced>
+		</f:section>
+	</f:nested>
+	
+	<!-- Advanced -->
+	<f:nested>
+		<f:section title="Advanced Options" >
+			<f:advanced>
+				<!-- Task Timeout -->
+				<f:entry title="${%Task Timeout}" field="taskTimeout">
+					<f:textbox default="${descriptor.getDefaultTaskTimeout()}" />
+				</f:entry>
+				
+				<!-- Task Publish Timeout -->
+				<f:entry title="${%Task Publish Timeout}" field="taskPublishTimeout">
+					<f:textbox default="${descriptor.getDefaultTaskPublishTimeout()}" />
+				</f:entry>
+				
+				<!-- Task Reserve Timeout -->
+				<f:entry title="${%Task Reserve Timeout}" field="taskReserveTimeout">
+					<f:textbox default="${descriptor.getDefaultTaskReserveTimeout()}" />
+				</f:entry>
+				
+				<!-- Test Timeout -->
+				<f:entry title="${%Test Timeout}" field="testTimeout">
+					<f:textbox default="${descriptor.getDefaultTestTimeout()}" />
+				</f:entry>
+				
+				<!-- Test Strategy -->
+				<f:entry title="${%Test Strategy}" field="testStrategy">
+					<f:textbox default="${descriptor.getDefaultTestStrategy()}" />
+				</f:entry>
+				
+				<!-- Test Auxiliaries -->
+				<f:entry title="${%Test Auxiliaries}" field="testAuxiliaries">
+					<f:textbox default="${descriptor.getDefaultTestAuxiliaries()}" />
+				</f:entry>
+			</f:advanced>
+		</f:section>
+	</f:nested>
+</j:jelly>
